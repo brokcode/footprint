@@ -1,0 +1,29 @@
+{
+    "name": "brokcode/footprint",
+    "description": "System activity and notification for laravel 8.0 and up",
+    "license": "MIT",
+    "keywords": [
+        "footprint",
+        "system activity",
+        "activities",
+        "user tracking",
+        "logging",
+        "logs",
+        "track",
+        "hidden track"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Brokcode\\Footprint\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hitesh Varyani",
+            "email": "hitesh@twoindianmonk.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

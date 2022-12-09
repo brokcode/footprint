@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Brokcode\\Footprint\\Src\\FootPrintServiceProvider"
+                "Brokcode\\Footprint\\FootPrintServiceProvider"
             ]
         }
     },

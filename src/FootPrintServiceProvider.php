@@ -15,11 +15,8 @@ class FootPrintServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
-            $this->publishes([
-                __DIR__.'/../config/footprint.php' => config_path('footprint.php'),
-            ], 'config');
-        }
+
+        $this->loadPublisher();
 
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
@@ -43,5 +40,21 @@ class FootPrintServiceProvider extends ServiceProvider
         }
 
         return $footprintModel;
+    }
+
+    protected function loadPublisher()
+    {
+        if (! function_exists('config_path')) {
+            // function not available and 'publish' not relevant in Lumen
+            return;
+        }
+
+        $this->publishes([
+            __DIR__.'/../config/footprint.php' => config_path('footprint.php'),
+        ], 'config');
+
+        $this->publishes([
+            __DIR__.'/../database/migrations/2022_10_05_101442_create_foot_prints_table.php' => $this->getMigrationFileName('create_foot_prints_tables.php'),
+        ], 'migrations');
     }
 }

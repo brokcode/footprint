@@ -24,6 +24,19 @@
             "role": "Developer"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brokcode\\Footprint\\Src\\FootPrintServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
     "minimum-stability": "dev",
-    "require": {}
+    "prefer-stable": true
 }

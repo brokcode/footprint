@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Brokcode\\Footprint\\": "src/"
+            "Brokecode\\Footprint\\": "src/"
         }
     },
     "authors": [
@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Brokcode\\Footprint\\FootPrintServiceProvider"
+                "Brokecode\\Footprint\\FootPrintServiceProvider"
             ]
         }
     },

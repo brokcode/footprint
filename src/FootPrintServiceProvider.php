@@ -20,6 +20,9 @@ class FootPrintServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
+        $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('footprint.php'),
+        ], 'config');
     }
 
     public function register()
@@ -54,7 +57,7 @@ class FootPrintServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/../database/migrations/2022_10_05_101442_create_foot_prints_table.php' => $this->getMigrationFileName('create_foot_prints_tables.php'),
+            __DIR__.'/../database/migrations/2022_10_05_101442_create_foot_prints_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_foot_prints_table.php'),
         ], 'migrations');
     }
 }
